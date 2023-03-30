@@ -1,0 +1,18 @@
+:root {
+    --content-width:80%;
+
+    --direction-flex:row;
+    --align-flex:left;
+    --order-flex:0;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --content-width:90%;
+        
+        --direction-flex:column;
+        --align-flex:center;
+        --order-flex:1;
+
+    }
+}

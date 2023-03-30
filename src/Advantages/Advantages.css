@@ -1,0 +1,72 @@
+@import url("../main.css");
+
+.advantage-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.advantage-wrapper>.content {
+    margin: auto;
+    padding: 3rem;
+    width: var(--content-width);
+    display: flex;
+    flex-direction: var(--direction-flex);
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10rem;
+}
+
+.content>.info {
+    width: 30rem;
+}
+.content>.info>.head {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.5;
+}
+.content>.info>.body {
+    padding-right: 4rem;
+}
+
+.advantage-wrapper>.content:nth-of-type(2)>.info {
+    order: var(--order-flex);
+}
+
+@media (max-width:768px) {
+    .advantage-wrapper>.content {
+        gap: 1rem;
+    }
+    .content>.info {
+        text-align: center;
+    }
+    .content>.info>.body {
+        padding: 0;
+    }
+}
+
+@media (max-width:1024px) {
+    .advantage-wrapper>.content {
+        gap: 2rem;
+    }
+    .content>.info>.body {
+        padding: 0;
+    }
+} 
+
+@media (max-width:425.6px) {
+    .advantage-wrapper>.content {
+        padding: 1.6rem;
+        gap: 0;
+    }
+    .content>.info {
+        width: 20rem;
+    }
+    .content>.info>.head {
+        line-height: 1.6;
+    }
+    .content>.image>img {
+        height: 10rem;
+    }
+}

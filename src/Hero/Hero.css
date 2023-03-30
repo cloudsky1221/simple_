@@ -1,0 +1,92 @@
+@import url("../main.css");
+
+section>.contents{
+    margin: auto;
+    padding: 5rem 0;
+    width: var(--content-width);
+    display: flex;
+    flex-direction: var(--direction-flex);
+    justify-content: space-between;
+    align-items: center;
+}
+
+section>.contents>.text {
+    width: 30rem;
+    order: var(--order-flex);
+    display: grid;
+    place-items: left;
+}
+
+section>.contents>.text>.input {
+    height: 3rem;
+    width: 28rem;
+    display: flex;
+    position: relative;
+}
+section>.contents>.text>.input>input {
+    padding-left: 1.5rem;
+    height: 3rem;
+    width: 28rem;
+    border: none;
+    border-radius: 2rem;
+    color: #566f7f;
+    box-shadow: 0 4px 4px 0 #b5ccda;
+}
+section>.contents>.text>.input>.button-wrapper>button {
+    position: absolute;
+    top: 0.9px;
+    right: 0.9px;
+}
+section>.contents>.text>.input>input:focus, 
+section>.contents>.text>.input>input:focus-visible{
+    outline: 0.5px solid #566f7f;
+}
+
+.sub{
+    margin-top: 0.8rem;
+    margin-left: 1.5rem;
+}
+.sub>a{
+    text-decoration: underline;
+}
+
+section>.contents>.image {
+    width: 22rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:768px) {
+    section>.contents>.text {
+        width: 40rem;
+        font-size: 1rem;
+        text-align: center;
+        place-items: center;
+    }
+    section>.contents>.image>img {
+        width: 12rem;
+    }
+}
+@media (max-width:425.6px) {
+    section>.contents>.text {
+        width: 22rem;
+    }
+    section>.contents>.text>h1 {
+        font-size: 2rem;
+    }
+    section>.contents>.image>img {
+        width: 12rem;
+    }
+    section>.contents>.text>.input {
+        height: 2rem;
+        width: 20rem;
+    }
+    section>.contents>.text>.input>input {
+        padding-left: 1.5rem;
+        height: 2rem;
+        width: 28rem;
+    }
+    section>.contents>.text>.input>.button-wrapper>button {
+        top: 1.2px;
+    }
+}

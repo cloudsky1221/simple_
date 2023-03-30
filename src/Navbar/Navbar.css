@@ -1,0 +1,75 @@
+@import url("../main.css");
+
+nav {
+    padding: 1rem 0;
+}
+
+nav>ul>li {
+    cursor: pointer;
+}
+
+nav>ul.hamburger,
+nav>ul.regular {
+    margin: auto;
+    padding: 0;
+    height: 4rem;
+    width: var(--content-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav>ul.hamburger {
+    display: none;
+}
+
+nav>ul.hidden {
+    padding: 2rem;
+    height: 20rem;
+    width: 10rem;
+    list-style: none;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav>ul>li>ul {
+    margin: 0;
+    padding: 0;
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+nav>ul>li>ul>li {
+    font-size: 1.2rem;
+}
+
+nav>ul>li>ul>li>span,
+nav>ul.hamburger>li>span {
+    margin-right: 2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: blue;
+}
+
+@media (max-width:768px) {
+    nav>ul {
+        margin: auto;
+    }
+}
+
+@media (max-width:425.6px) {
+    nav>ul.regular {
+        display: none;
+    }
+    nav>ul.hamburger {
+        display: flex;
+    }
+    nav>ul.hamburger>li>span {
+        font-size: 1.8rem;
+    }
+}
